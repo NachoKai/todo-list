@@ -8,6 +8,4 @@
   
 ### [Live Demo](https://todolist-kai.herokuapp.com/) 
 
- ![Demo](https://github.com/NachoKai/todo-list/blob/master/demo.png?raw=true)  
-
 (The Complete 2020 Web Development Bootcamp by Angela Yu)  
