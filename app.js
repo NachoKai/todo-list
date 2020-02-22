@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 mongoose.connect(
-	'mongodb+srv://<USER>:<PASSWORD>@cluster0-9ohi3.mongodb.net/fruitsDB',
+	`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-9ohi3.mongodb.net/fruitsDB`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true
@@ -134,4 +134,3 @@ app.get('/about', (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
 	console.log('Server is running on port 3000');
 });
-
